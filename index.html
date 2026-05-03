@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Caleb Choe — Stanford B.S. Math &amp; CS. Machine learning, reinforcement learning, cybersecurity, and LLM systems."
+      content="Caleb Choe — Stanford B.S. Math &amp; CS. Cryptography, systems security, adversarial reasoning, and applied ML."
     />
     <title>Caleb Choe — Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,6 +36,7 @@
         <nav class="site-nav" id="site-nav" aria-label="Primary">
           <ul>
             <li><a href="#about">About</a></li>
+            <li><a href="#research">Research interests</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -52,8 +53,8 @@
         <div>
           <h1 id="hero-title">Caleb Choe</h1>
           <p class="hero-tagline">
-            Stanford sophomore studying mathematics and computer science, focused on cybersecurity,
-            reinforcement learning, and LLM systems.
+            Stanford undergraduate in mathematics and computer science. I think in proofs and threat models:
+            cryptography, systems security, and how real deployments diverge from what the math promises.
           </p>
           <p class="hero-meta">Stanford University · B.S. Math &amp; CS · Expected 2028</p>
           <div class="hero-actions">
@@ -121,16 +122,42 @@
       <section id="about" aria-labelledby="about-heading">
         <h2 id="about-heading">About</h2>
         <p class="lead">
-          I work at the intersection of <strong>machine learning</strong> and <strong>security</strong>: building
-          adaptive systems under uncertainty, exploring reinforcement learning for structured decision problems,
-          and competing in capture-the-flag contests with an emphasis on cryptography and web exploitation.
+          I care about <strong>cryptography</strong> and <strong>system security</strong> grounded in serious
+          mathematics: reductions and assumptions, protocol behavior under composition, and where engineering choices
+          undermine formal guarantees. In capture-the-flag competitions I spend most of my time in crypto, reversing,
+          and web—training adversarial habits that complement textbook proofs.
         </p>
         <p class="lead">
-          As machine learning lead on a CURIS research project with Prof. Chris Piech, I develop statistical
-          modeling and simulation tooling for adaptive diagnostic testing. Outside of research, I have shipped
-          curriculum at Lumi.Network, built production web and database systems as an intern, and led applied
-          ML teams through Inspirit AI.
+          As machine learning lead on a CURIS project with Prof. Chris Piech, I build statistical modeling and
+          simulation for adaptive diagnostic testing—probability as engineering, not buzzwords. I have also shipped
+          security-aware curriculum at Lumi.Network, built production web and data systems as an intern, and led
+          applied ML teams through Inspirit AI.
         </p>
+      </section>
+
+      <section id="research" aria-labelledby="research-heading">
+        <h2 id="research-heading">Research interests</h2>
+        <p class="lead">
+          Questions I keep returning to—the same themes I foreground in my statement and when talking with faculty:
+        </p>
+        <ul class="research-list">
+          <li>
+            <strong>Post-quantum foundations.</strong> Which hardness assumptions still look viable under cryptanalysis
+            and migration pressure, and how we reason about them in protocol design.
+          </li>
+          <li>
+            <strong>Provable security and protocols.</strong> Game-based proofs, careful modeling of adversaries, and
+            designs that remain meaningful when systems are composed or iterated.
+          </li>
+          <li>
+            <strong>Formal guarantees vs. deployed systems.</strong> Gaps between what proofs assume (ideal primitives,
+            honest implementations) and what ships in browsers, TLS stacks, and enterprise configs.
+          </li>
+          <li>
+            <strong>Automated attack and defense surfaces.</strong> How ML and automation change exploitation and
+            defense—without treating “AI for security” as a substitute for cryptographic rigor.
+          </li>
+        </ul>
       </section>
 
       <section id="education" aria-labelledby="education-heading">
@@ -184,7 +211,43 @@
 
       <section id="projects" aria-labelledby="projects-heading">
         <h2 id="projects-heading">Projects</h2>
+        <p class="lead" style="margin-top: -0.5rem">
+          Cryptography- and security-focused work first; broader reinforcement-learning projects follow. Cards link to
+          public repositories and other artifacts where available.
+        </p>
         <div class="project-grid">
+          <article class="project-card">
+            <h3>Capture-the-Flag competitor</h3>
+            <p>Top ~3% across major competitions (EHAXCTF, scriptCTF, WHY2025, CRHCCTF).</p>
+            <ul>
+              <li>Primary focus on cryptography, web exploitation, and reverse engineering.</li>
+              <li>Exploit development and strategy under real competition time pressure.</li>
+            </ul>
+            <ul class="project-links" aria-label="Links for this project">
+              <li>
+                <a href="https://github.com/Tabaxi3000/CalebCTF" rel="noopener noreferrer" target="_blank">GitHub repo</a>
+              </li>
+            </ul>
+            <span class="tag">Security · CTF</span>
+          </article>
+          <article class="project-card">
+            <h3>Custom security challenges &amp; tooling</h3>
+            <p>Scripts and tooling for cryptographic challenges (e.g., RSA attacks, encoding/decoding pipelines).</p>
+            <ul>
+              <li>Automated patterns for cryptographic and CTF-style problem solving.</li>
+            </ul>
+            <ul class="project-links" aria-label="Links for this project">
+              <li>
+                <a href="https://github.com/Tabaxi3000/CalebCTF" rel="noopener noreferrer" target="_blank">GitHub repo</a>
+              </li>
+              <li>
+                <a href="https://github.com/Tabaxi3000?tab=repositories" rel="noopener noreferrer" target="_blank"
+                  >More repos</a
+                >
+              </li>
+            </ul>
+            <span class="tag">Crypto · Tooling</span>
+          </article>
           <article class="project-card">
             <h3>Alpha-Hypothesis — RL for protein–ligand design (CS224R)</h3>
             <p>
@@ -204,24 +267,14 @@
               <li>Convolutional + recurrent architectures for partially observable state.</li>
               <li>Strong performance versus baseline agents.</li>
             </ul>
+            <ul class="project-links" aria-label="Links for this project">
+              <li>
+                <a href="https://github.com/Tabaxi3000/CS229FinalProject" rel="noopener noreferrer" target="_blank"
+                  >GitHub repo</a
+                >
+              </li>
+            </ul>
             <span class="tag">RL · Games</span>
-          </article>
-          <article class="project-card">
-            <h3>Capture-the-Flag competitor</h3>
-            <p>Top ~3% across major competitions (EHAXCTF, scriptCTF, WHY2025, CRHCCTF).</p>
-            <ul>
-              <li>Focus on cryptography, web exploitation, and reverse engineering.</li>
-              <li>Developed exploit scripts and strategies under time pressure.</li>
-            </ul>
-            <span class="tag">Security · CTF</span>
-          </article>
-          <article class="project-card">
-            <h3>Custom security challenges &amp; tooling</h3>
-            <p>Scripts and tooling for cryptographic challenges (e.g., RSA attacks, encoding/decoding pipelines).</p>
-            <ul>
-              <li>Automated vulnerability-discovery patterns in CTF-style environments.</li>
-            </ul>
-            <span class="tag">Crypto · Tooling</span>
           </article>
           <article class="project-card">
             <h3>Applied ML — Inspirit AI</h3>
@@ -230,6 +283,13 @@
               <li>NLP system for voice-command classification and entity extraction.</li>
               <li>ASL recognition (100+ words) with PyTorch and video; co-authored research write-up.</li>
               <li>Conversational chatbot simulating mental health support workflows.</li>
+            </ul>
+            <ul class="project-links" aria-label="Links for this project">
+              <li>
+                <a href="https://github.com/Tabaxi3000/inspirit-ai-1-1" rel="noopener noreferrer" target="_blank"
+                  >GitHub repo</a
+                >
+              </li>
             </ul>
             <span class="tag">NLP · CV · Teams</span>
           </article>
@@ -245,7 +305,7 @@
           </div>
           <div class="skill-card">
             <h3>Domains</h3>
-            <p>Machine learning (NLP, RL, CV), cybersecurity (CTFs), statistical modeling</p>
+            <p>Cryptography &amp; protocol thinking, systems security and CTF-style exploitation, ML (NLP, RL, CV), statistical modeling</p>
           </div>
         </div>
       </section>
@@ -265,7 +325,7 @@
       <section id="contact" aria-labelledby="contact-heading">
         <h2 id="contact-heading">Contact</h2>
         <p class="lead">
-          For research collaborations, internship opportunities, or CTF teams, reach out by email or connect on
+          For research in cryptography and security, internships, or CTF teams, reach out by email or connect on
           LinkedIn and GitHub.
         </p>
         <div class="hero-actions" style="margin-top: 1rem">
